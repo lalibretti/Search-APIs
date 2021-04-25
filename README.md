@@ -1,4 +1,4 @@
-# Search-APIs with <img src="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif" width="200" alt='giphy logo'>
+# Search-APIs with <img src="https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif" width="200" height='100' alt='giphy logo'>
 
 Search App using Giphy's API to display images, scripts written with javascript. Styling via<img src ="https://user-images.githubusercontent.com/13642682/116003825-c7915000-a5cd-11eb-8169-198d12193d81.png" width="200" alt="tailwind">
 
