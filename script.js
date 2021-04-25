@@ -13,12 +13,16 @@ const apiKey ='mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
             return res.json()
         }).then((json) => {
             console.log(json);
-            let results = json['items'];
+            let results = json.data;
             console.log('results array:', results);
 
+        
             document.getElementById('results').innerHTML = "";
-            for( let result of results) {
-                console.log(result.images.original)
+            
+            for( let image of json.data) {
+                let imageUrl = image.images.original.url 
+                console.log("the results are",image.images.original.url);
+                document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<img src= ${imageUrl} />`;
             }
 
         })
