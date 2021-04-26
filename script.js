@@ -1,10 +1,11 @@
-const apiKey ='mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
+//API KEY const apiKey ='mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
 
-    
+
    window.addEventListener('load', (event) => {
     console.log('page is loaded');
     document.getElementById('search-button').addEventListener('click', () => {
-        console.log('button was clicked');
+        console.log('the search button was clicked');
+
         let searchTerm = document.getElementById('search-term').value;
         console.log('search term is', searchTerm);
         
@@ -22,6 +23,7 @@ const apiKey ='mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
             for( let image of json.data) {
                 let imageUrl = image.images.original.url 
                 console.log("the results are",image.images.original.url);
+                document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<a href= [image.url] />`;
                 document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<img src= ${imageUrl} />`;
             }
 
