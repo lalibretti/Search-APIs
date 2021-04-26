@@ -1,6 +1,27 @@
 body {
 align-items: center !important;
 }
-.search {
+.search-button {
     margin: 3%;
+    display: flex;
 }
+img {
+    width: 15rem;
+}
+
+.button, .search , input {
+    border-radius: 25rem;
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+}
+
+
+
+
+
+
+
+/*<div class="vertical-center" >

@@ -14,7 +14,7 @@
 <body>
     <div class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,28 +22,33 @@
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="#">JS
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Jquery</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="grid grid-cols-12 justify-center">
-        <h1 class="title">Find an Image!</h1>
-        <div class='col-span-12 md:col-span-12 p-5 justify-center'>
-            <input type="search" class="col-span-12 border p-3 w-full" placeholder="Type your query here..." id='search-term' />
-        </div>
-        <div class='col-span-12 md:col-span-2 p-2 flex justify-center'>
-            <button id='search-button'
-                class="p-2 w-1/2 md:w-full pr-3 pl-3 text-white bg-blue-500 rounded">Search</button>
-        </div>
-        <div class='col-span-12 p-4 border mt-4' id='results'>
-
+    <div class="row justify-content-center">
+        <div class="header grid grid-cols-12">
+            <h1 class="title m-4 pb-4">Find an Image!</h1>
         </div>
     </div>
- </body>
+    <div class="row g-5">
+            <input type="search" class="col-md-10 m-4 border border-3 shadow p-2" placeholder="Find an image here!"
+                id='search-term' />
+        </div>
+        <div class="col-2 ">
+            <button id='search-button border-3 rounded-pill shadow p-2' class="text-black">Search</button>
+        </div>
+    </div>
+    <div class='col-span-12 p-4 ' id='results'>
+        <img class="w-10 " />
+    </div>
+    </div>
+</body>
+
 </html>
