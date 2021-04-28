@@ -36,11 +36,8 @@ $(document).ready(function () {
         }
 
     )
-
+//Left in ajax request to query the server for json results 
      //   $('#results').html("")
-
-     
-//
         // $.ajax({
         //     type: "GET",
         //     dataType: "json",
