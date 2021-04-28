@@ -11,4 +11,5 @@ Search App using Giphy's API to display images, scripts written with javascript.
 - As a {person who likes jokes} want to search for images so that {I can get a chuckle}.
 - As a {person who likes using giphs} I want to be able to search for images that I can {filter to a topic}.
 
-wireframes:<https://www.figma.com/file/DBK59bFYjcfdsi4ZnXtcDJ/API?node-id=0%3A1>
+### Wireframes:
+<https://www.figma.com/file/DBK59bFYjcfdsi4ZnXtcDJ/API?node-id=0%3A1>
