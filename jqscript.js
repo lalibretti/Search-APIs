@@ -1,39 +1,64 @@
-//API KEY const apiKey ='mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
+//API KEY 
+const apiKey = 'mlye8iDHtLK95jzzL2sydUiQFmWe5nEy';
 
-$(document).ready(function() {
+$(document).ready(function () {
     console.log('ready');
-    var api_key = 'mlye8iDHtLK95jzzL2sydUiQFmWe5nEy'; 
-    $(".btn").click(function () {
+
+    $(".btn").on('click', (function () {
         console.log('button clicked!');
-        var result = $(".search").val().trim();
-        if (result === ""){
+
+        let searchTerm = $("#search-term").val();
+        console.log('the search term is', searchTerm);
+    
+        if (searchTerm === "") {
             alert("fill out for gif!");
-            return; 
+            return;
         }
-        $.ajax({
-            type: "GET",
-            dataType: "json",
-            cache: false,
-            url:
-              "https://api.giphy.com/v1/gifs/search?q=" +
-              result +
-              "&api_key=" +
-              api_key,
-            success: function (response) {
-              $(".result").empty();
-              var data = response.data;
-              if (data) {
-                data.slice(0, 10).forEach(function (item) {
-                  $(".results").append(
-                    "<img src='" +
-                      item.images.original.url +
-                      "'class='col-12 col-md-4'>"
-                  );
-                });
-              } else {
-                alert("no giphys here!");
-              }
-            }
-          });
-        });
-      });
+        $.get(`https://api.giphy.com/v1/gifs/search?api_key=mlye8iDHtLK95jzzL2sydUiQFmWe5nEy&q=${searchTerm}&limit=25&offset=0&rating=g&lang=en`)
+            .then((json) => {
+                console.log(json);
+
+        
+                let results = json;
+                console.log('results array:',results);
+
+                $('#results').html("")
+
+
+    //Why isnt this working? Error says results isnt iterable
+                for (let image of results) {
+                    let url = image.images.original.url
+                    console.log('results are', url);
+
+                    $('#results').append(`<div class='p-5 border-b border-gray-300'>${images.original.url}`)
+                };
+            })
+        }
+
+    )
+
+     //   $('#results').html("")
+
+     
+//
+        // $.ajax({
+        //     type: "GET",
+        //     dataType: "json",
+        //     cache: false,
+        //     url: `https://api.giphy.com/v1/gifs/search?api_key=mlye8iDHtLK95jzzL2sydUiQFmWe5nEy&q=${searchTerm}&limit=25&offset=0&rating=g&lang=en`,
+        //     success: function (response) {
+        //         $(".result").empty();
+        //         var data = response.data;
+        //         if (data) {
+        //             data.slice(0, 10).forEach(function (item) {
+        //                 $(".results").append(
+        //                     "<img src='" +
+        //                     item.images.original.url
+        //                 );
+        //             });
+        //         } else {
+        //             alert("no giphys here!");
+        //         }
+        //     }
+        // })
+    )})

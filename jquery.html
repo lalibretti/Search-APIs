@@ -14,7 +14,7 @@
     <title>Search for a Giphy! </title>
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="">
         <nav class="navbar navbar-expand-sm navbar-light bg-light text-white">
             <a class="navbar-brand" href="#"></a>
@@ -24,27 +24,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-item nav-link " href="index.html">Javascript</a>
-                  <a class="nav-item nav-link active" href="jquery.html"><span class="sr-only">Jquery</span></a>
+                    <a class="nav-item nav-link " href="index.html">Javascript</a>
+                    <a class="nav-item nav-link active" href="jquery.html"><span class="sr-only">Jquery</span></a>
                 </div>
-              </div>
+            </div>
         </nav>
     </div>
-    <div class="container m-3 bg-dark">
-        <div class="row ">
-            <div class="header grid grid-cols-12">
-                <h1 class="search m-4 pb-4 text-white">Find an Image with Jquery!</h1>
-            </div>
-        </div>
-    </div>
+    <h1 class="search m-4 pb-4 bg-dark text-white align-items-center">Find an Image with Jquery!</h1>
     <div class="container m-5">
-        <div class="row position-fixed m-top-0 start-50 translate-middle">
+        <div class="row d-flex flex-row align-items-center">
             <div class="col-md-10 ">
-                <input type="search" method="GET" class=" search w-100 m-4 border shadow-lg rounded  border-1 shadow p-2" placeholder="Find an image here!"
-                    id='search-term' />
+                <input type="search" method="GET"
+                    class=" search w-100 m-4 border rounded bg-white text-dark border-1 shadow shadow-primary shadow-inset p-2"
+                    placeholder="Find an image here!" id='search-term' />
             </div>
-            <div class="col-md-2 ">
-                <button id="search-button" class="btn position-bottom rounded shadow-lg p-2 bg-dark text-white">Search</button>
+            <div class="col-md-2">
+                <button id="search-button"
+                    class="btn position-bottom rounded shadow-pop p-2 bg-white text-dark">Search</button>
             </div>
         </div>
     </div>
@@ -55,6 +51,6 @@
         </div>
     </div>
     </div>
-    </body>
+</body>
 
 </html>

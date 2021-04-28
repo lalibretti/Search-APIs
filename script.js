@@ -22,7 +22,7 @@
             
             for( let image of json.data) {
                 let imageUrl = image.images.original.url 
-                console.log("the results are",image.images.original.url);
+                console.log("looped url results ",image.images.original.url);
                 document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<a href= [image.url] />`;
                 document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<img src= ${imageUrl} />`;
             }

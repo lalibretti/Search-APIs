@@ -10,7 +10,6 @@ font-family: 'Antonio', sans-serif;
 img {
     width: 15rem;
     justify-content: center;
-   /* display: flex;*/
 }
 
 h1 {
@@ -27,9 +26,20 @@ button {
     box-shadow: C4C4C4;
     letter-spacing: .2rem;
 }
+.nav-item{
+    transition: background-color .5s;
+    
+}
+.nav-item:hover {
+background-color: rgba(0, 0, 0, 0.377);
+
+}
+
+
 input {
     word-spacing: .2rem;
     letter-spacing: .2rem;
     margin: 3rem;
     background-color: C4C4C4;
+    color:black;
 }
