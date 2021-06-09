@@ -18,19 +18,18 @@ $(document).ready(function () {
             .then((json) => {
                 console.log(json);
 
-        
                 let results = json;
-                console.log('results array:',results);
-
+                console.log('results array:', results);
                 $('#results').html("")
 
 
     //Why isnt this working? Error says results isnt iterable
-                for (let image of results) {
+                for (let i=0; i< results.length; i++) {    
                     let url = image.images.original.url
                     console.log('results are', url);
-
-                    $('#results').append(`<div class='p-5 border-b border-gray-300'>${images.original.url}`)
+                    $('#results').append("<img src='" + url)
+                    //document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<a href= [image.url] />`;
+                //document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + `<img src= ${imageUrl} />`;
                 };
             })
         }

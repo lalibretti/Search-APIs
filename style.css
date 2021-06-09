@@ -35,11 +35,18 @@ background-color: rgba(0, 0, 0, 0.377);
 
 }
 
-
 input {
     word-spacing: .2rem;
     letter-spacing: .2rem;
     margin: 3rem;
     background-color: C4C4C4;
- 
+}
+
+@media only screen and (max-width: 600px) {
+    .search {
+        width: 70% !important;
+    }
+    button {
+        width: fit-content;
+    }
 }
